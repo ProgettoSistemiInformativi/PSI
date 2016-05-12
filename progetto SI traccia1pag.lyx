@@ -1,0 +1,239 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass scrartcl
+\begin_preamble
+\addtokomafont{disposition}{\rmfamily}
+\usepackage{microtype}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman lmodern
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 1cm
+\rightmargin 2cm
+\bottommargin 1cm
+\headheight 0cm
+\headsep 0cm
+\footskip 0cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-1.5cm}
+\end_layout
+
+\end_inset
+
+Progetto di sistemi informativi
+\end_layout
+
+\begin_layout Subtitle
+Politecnico di Milano, Corso di Laurea in ingegneria informatica
+\begin_inset Newline newline
+\end_inset
+
+Anno accademico 2015/2016, Prof.ssa Cinzia Cappiello
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-2cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Traccia
+\end_layout
+
+\begin_layout Subsection
+Composizione del gruppo
+\end_layout
+
+\begin_layout Itemize
+Gabriele Vanoni, 808732, gabriele.vanoni@mail.polimi.it
+\end_layout
+
+\begin_layout Itemize
+Francesco Vona, 807911, francesco.vona@mail.polimi.it
+\end_layout
+
+\begin_layout Subsection
+Titolo
+\end_layout
+
+\begin_layout Standard
+Gestione del sistema sanitario regionale: un approccio integrato.
+\end_layout
+
+\begin_layout Subsection
+Obiettivi
+\end_layout
+
+\begin_layout Standard
+Lo stato dell'arte nella regione XXX è di un diverso sistema informativo
+ per ogni ospedale.
+ In questo modo risulta difficile omogenizzare il carico a cui viene sottoposta
+ ogni struttura ospedaliera.
+ Inoltre manca la possibilità da parte degli utenti di poter effettuare
+ da casa le operazioni di prenotazione e visura dei referti.
+ 
+\end_layout
+
+\begin_layout Standard
+Con lo sviluppo di un sistema informativo basato sul web integrato su tutta
+ la regione si renderebbe possibile un'efficiente soluzione a questi problemi.
+ Il paziente infatti gestirebbe da casa le prenotazioni avendo sull'interfaccia
+ web il quadro completo regionale di tutte le strutture in cui potrebbe
+ essere visitato, potendo scegliere quindi tra la vicinanza, il tempo di
+ attesa, il medico, la struttura, l'orario, etc.
+ 
+\end_layout
+
+\begin_layout Standard
+L'integrazione permetterebbe al medico l'accesso allo storico del paziente
+ e lo snellimento delle procedure burocratiche di prenotazione di ulteriori
+ visite e di prescrizione dei farmaci.
+\end_layout
+
+\begin_layout Standard
+Il nuovo sistema dovrà interfacciarsi con quelli preesistenti nelle singole
+ strutture, in modo tale da sfruttare ciò che è già stato progettato.
+\end_layout
+
+\begin_layout Standard
+Il progetto presentato è di natura regionale, ma verrà realizzato per essere
+ completamente scalabile immaginando una futura copertura nazionale.
+\end_layout
+
+\begin_layout Subsection
+Funzionalità
+\end_layout
+
+\begin_layout Subsubsection
+Lato utente
+\end_layout
+
+\begin_layout Itemize
+Gestione online delle prenotazioni delle prestazioni ospedaliere all'interno
+ del territorio regionale.
+\end_layout
+
+\begin_layout Itemize
+Gestione del profilo utente comprensivo di dati anagrafici, lista delle
+ prenotazioni, lista dei referti, lista delle ricette e memorandum visite,
+ collegato univocamente alla tessera sanitaria.
+\end_layout
+
+\begin_layout Itemize
+Pagamento prestazioni online
+\end_layout
+
+\begin_layout Subsubsection
+Lato medico
+\end_layout
+
+\begin_layout Itemize
+Possibilità di caricare i referti, prescrivere nuove prestazioni e farmaci.
+\end_layout
+
+\begin_layout Itemize
+Possibilità di fissare appuntamenti per un paziente in cura.
+\end_layout
+
+\begin_layout Itemize
+Possibilità di visualizzare i profili dei pazienti in cura.
+\end_layout
+
+\begin_layout Subsubsection
+Lato segreteria/amministrazione
+\end_layout
+
+\begin_layout Itemize
+Inserimento di tutte le informazioni necessarie per il funzionamento del
+ sistema informativo come gli orari dei medici, la gestione degli spazi,
+ etc.
+\end_layout
+
+\begin_layout Itemize
+Possibilità di agire sul lato cliente quando contattati per telefono o allo
+ sportello (prenotazione o cancellazione visite, consegna referti, etc.).
+\end_layout
+
+\end_body
+\end_document
