@@ -2153,5 +2153,40 @@ A differenza della precedente implementazione in questo caso è necessario
 
 \end_layout
 
+\begin_layout Part
+Modellazione
+\end_layout
+
+\begin_layout Section
+Descrizione delle funzionalità
+\end_layout
+
+\begin_layout Standard
+Il sistema informativo deve permettere ai pazienti e ai medici di interagire
+ con il sistema centralizzato delle prenotazioni.
+ Ogni utente potrà accedere ai servizi effettuando l'accesso con il proprio
+ account personale.
+ In particolare il paziente potrà gestire le proprie prenotazioni, fissandole
+ o cancellandole.
+ Inoltre potrà pagare le prestazioni online attraverso un gestore di pagamenti
+ esterno.
+\end_layout
+
+\begin_layout Standard
+Il medico dovrà avere la possibilità di consulatare la prorpria agenda con
+ gli appuntamenti e fissarne di nuovi.
+ Inoltre potrà prescrivere farmaci e nuove prestazioni per i pazienti in
+ cura.
+\end_layout
+
+\begin_layout Standard
+Ogni utente del sistema sarà dotato di un proprio profilo utente.
+ I pazienti avranno la possibilità di visualizzare lo storico delle visite
+ con i referti allegati che saranno stati caricati dai medici, oltre alle
+ ricette e alle prenotazioni effettuate.
+ Ogni medico avrà un proprio profilo aggiornabile consultabile dai pazienti
+ e sarà in grado di vedere i profili dei propri pazienti.
+\end_layout
+
 \end_body
 \end_document
