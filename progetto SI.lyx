@@ -2410,7 +2410,32 @@ Il processo inizia con l'inserimento da parte dell'utente delle credenziali,
  Questo effettua la ricerca nel database e notifica l'esito all'utente.
  Se è negativo entrambi i processi terminano.
  Altrimenti i dati vengono mandati all'utente che li visualizza.
+ A questo punto l' utente seleziona i filtri.
+ Se il risultato non è soddisfacente i filtri possono essere risettati,
+ altrimenti seleziona l' appuntamento desiderato.
+\end_layout
+
+\begin_layout Standard
+Il sistema centralizzato riceve la richiesta di appuntamento e la inserisce
+ nel database generando la richiesta di pagamento che verrà inviata all'
+ utente.
+ A questo punto l' utente avrà due giorni per procedere al pagamento e terminare
+ il processo.
  
+\end_layout
+
+\begin_layout Standard
+In caso contrario la prenotazione viene annullata ed eliminata dal database.
+\end_layout
+
+\begin_layout Standard
+Il processo di pagamento inizia con l' inserimento dei dati della carta.
+ Il gestore pagamenti notificherà l' esito della verifica all'utente che
+ potrà reinserire i dati se inseriti scorrettamente.
+ Se la verifica va a buon fine il gestore notifica il sistema centrale che
+ provvede a registrare il pagamento all' interno del sistema di contabilità
+ della singola struttura, a convalidare il pagamento e ad inviare la conferma
+ all' utente per poi terminare insieme al processo dell' utente.
 \end_layout
 
 \begin_layout Subsection
