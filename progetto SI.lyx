@@ -2153,8 +2153,27 @@ A differenza della precedente implementazione in questo caso è necessario
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Part
-Modellazione
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{0.5cm}
+\end_layout
+
+\end_inset
+
+Modellazione del sistema informativo
 \end_layout
 
 \begin_layout Section
@@ -2186,6 +2205,229 @@ Ogni utente del sistema sarà dotato di un proprio profilo utente.
  ricette e alle prenotazioni effettuate.
  Ogni medico avrà un proprio profilo aggiornabile consultabile dai pazienti
  e sarà in grado di vedere i profili dei propri pazienti.
+\end_layout
+
+\begin_layout Subsection
+Scheda caso d'uso 
+\begin_inset Quotes eld
+\end_inset
+
+fissare prenotazione
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="11cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Nome caso d'uso
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+Fissare prenotazione
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Descrizione
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+L'utente deve potere prenotare una prestazione medica tramite l'interfaccia
+ online.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Precondizioni
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+Il medico deve aver prescritto la prestazione per l'utente
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Flusso principale
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+L'utente dopo aver inserito le credenziali d'accesso e aver selezionato
+ i filtri, fissa il proprio appuntamento in una struttura.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Flussi alternativi
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+Se le credenziali inserite non sono corrette, l'utente viene invitato a
+ riprovare, e altrettanto potrà fare se il filtraggio dei risultati non
+ produce il risultato desiderato.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Postcondizioni
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+L'appuntamento è registrato nel database e quindi nel profilo dell'utente.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Use case diagram
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename usecase.pdf
+	lyxscale 10
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Descrizione del processo di prenotazione
+\end_layout
+
+\begin_layout Standard
+Il processo di prenotazione prevede l'interazione dell'utente con l'interfaccia
+ web offerta dal sistema sanitario regionale.
+\end_layout
+
+\begin_layout Standard
+Il processo inizia con l'inserimento da parte dell'utente delle credenziali,
+ che vengono inviate al sistema centrale che le verifica.
+ Se la verifica non va a buon fine l'utente viene notificato e le credenziali
+ dovranno essere reinserite.
+ Altrimenti dopo la ricezione della conferma seleziona dall'interfaccia
+ la funzionalità prenotazione e richiede al sistema le prestazioni disponibili.
+ Questo effettua la ricerca nel database e notifica l'esito all'utente.
+ Se è negativo entrambi i processi terminano.
+ Altrimenti i dati vengono mandati all'utente che li visualizza.
+ 
+\end_layout
+
+\begin_layout Subsection
+Diagramma BPMN
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename bpmn.pdf
+	lyxscale 10
+	scale 37
+	rotateAngle 90
+
+\end_inset
+
+
 \end_layout
 
 \end_body
