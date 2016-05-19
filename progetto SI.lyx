@@ -2187,14 +2187,16 @@ Il sistema informativo deve permettere ai pazienti e ai medici di interagire
  Ogni utente potrà accedere ai servizi effettuando l'accesso con il proprio
  account personale.
  In particolare il paziente potrà gestire le proprie prenotazioni, fissandole
- o cancellandole.
- Inoltre potrà pagare le prestazioni online attraverso un gestore di pagamenti
- esterno.
+ ed effettuando il pagamento o cancellandole.
 \end_layout
 
 \begin_layout Standard
-Il medico dovrà avere la possibilità di consulatare la prorpria agenda con
- gli appuntamenti e fissarne di nuovi.
+Anche il medico potrà accedere ai servizi tramite login.
+\end_layout
+
+\begin_layout Standard
+Dovrà avere la possibilità di consulatare la prorpria agenda con gli appuntament
+i e fissarne di nuovi.
  Inoltre potrà prescrivere farmaci e nuove prestazioni per i pazienti in
  cura.
 \end_layout
@@ -2222,10 +2224,10 @@ fissare prenotazione
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="6" columns="2">
+<lyxtabular version="3" rows="7" columns="2">
 <features rotate="0" tabularvalignment="middle">
 <column alignment="center" valignment="top">
-<column alignment="center" valignment="top" width="11cm">
+<column alignment="left" valignment="top" width="11cm">
 <row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -2238,12 +2240,12 @@ Nome caso d'uso
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \align left
-Fissare prenotazione
+Fissare prenotazione.
 \end_layout
 
 \end_inset
@@ -2261,7 +2263,7 @@ Descrizione
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2281,17 +2283,40 @@ L'utente deve potere prenotare una prestazione medica tramite l'interfaccia
 \begin_layout Plain Layout
 
 \series bold
+Attori
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Utente, medico, gestore pagamenti.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
 Precondizioni
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \align left
-Il medico deve aver prescritto la prestazione per l'utente
+Il medico deve aver prescritto la prestazione per l'utente e l'utente deve
+ aver effettuato l'accesso.
 \end_layout
 
 \end_inset
@@ -2309,13 +2334,14 @@ Flusso principale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \align left
-L'utente dopo aver inserito le credenziali d'accesso e aver selezionato
- i filtri, fissa il proprio appuntamento in una struttura.
+L'utente dopo aver richiesto la funzionalità prenotazione, aver visualizzato
+ i risultati e aver selezionato i filtri, fissa il proprio appuntamento
+ in una struttura ed effettua il pagamento.
 \end_layout
 
 \end_inset
@@ -2333,14 +2359,38 @@ Flussi alternativi
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
+
+\begin_layout Plain Layout
+Se l'utente non ha già effettuato l'accesso dovrà provvedere prima di potere
+ procedere con la prenotazione.
+\end_layout
 
 \begin_layout Plain Layout
 \align left
 Se le credenziali inserite non sono corrette, l'utente viene invitato a
- riprovare, e altrettanto potrà fare se il filtraggio dei risultati non
- produce il risultato desiderato.
+ riprovare.
+\end_layout
+
+\begin_layout Plain Layout
+Se la ricerca nel database non dà risultati il processo termina.
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+Se il filtraggio dei risultati non produce il risultato desiderato l'utente
+ potrà inserire un nuovo filtro.
+\end_layout
+
+\begin_layout Plain Layout
+Se durante il pagamento i dati inseriti non sono corretti, dovranno essere
+ reinseriti.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Se l'utente non paga entro due giorni, la prenotazione viene cancellata.
 \end_layout
 
 \end_inset
@@ -2358,12 +2408,13 @@ Postcondizioni
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \align left
-L'appuntamento è registrato nel database e quindi nel profilo dell'utente.
+L'appuntamento è registrato nel database e quindi nel profilo dell'utente
+ e nell'agenda del medico.
 \end_layout
 
 \end_inset
@@ -2385,6 +2436,19 @@ L'appuntamento è registrato nel database e quindi nel profilo dell'utente.
 
 \begin_layout Subsection
 Use case diagram
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{0.5cm}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2416,8 +2480,8 @@ Il processo di prenotazione prevede l'interazione dell'utente con l'interfaccia
 \end_layout
 
 \begin_layout Standard
-Il processo inizia con l'inserimento da parte dell'utente delle credenziali,
- che vengono inviate al sistema centrale che le verifica.
+Il procescon l'inserimento da parte dell'utente delle credenziali, che vengono
+ inviate al sistema centrale che le verifica.
  Se la verifica non va a buon fine l'utente viene notificato e le credenziali
  dovranno essere reinserite.
  Altrimenti dopo la ricezione della conferma seleziona dall'interfaccia
@@ -2453,6 +2517,13 @@ Il processo di pagamento inizia con l' inserimento dei dati della carta.
  all' utente per poi terminare insieme al processo dell' utente.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Diagramma BPMN
 \end_layout
@@ -2472,6 +2543,19 @@ Diagramma BPMN
 
 \begin_layout Section
 Descrizione del modello dei dati - diagramma ER
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{0.5cm}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
