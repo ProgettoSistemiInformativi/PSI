@@ -2268,8 +2268,8 @@ Descrizione
 
 \begin_layout Plain Layout
 \align left
-L'utente deve potere prenotare una prestazione medica tramite l'interfaccia
- online.
+L'utente deve potere prenotare e pagare una prestazione medica tramite l'interfa
+ccia online.
  
 \end_layout
 
@@ -2292,7 +2292,7 @@ Attori
 \begin_inset Text
 
 \begin_layout Plain Layout
-Utente, medico, gestore pagamenti.
+Utente, medico (passivo), gestore pagamenti.
 \end_layout
 
 \end_inset
@@ -2413,8 +2413,8 @@ Postcondizioni
 
 \begin_layout Plain Layout
 \align left
-L'appuntamento è registrato nel database e quindi nel profilo dell'utente
- e nell'agenda del medico.
+L'appuntamento è registrato nel database e perciò visualizzabile nel profilo
+ dell'utente e nell'agenda del medico.
 \end_layout
 
 \end_inset
@@ -2480,12 +2480,22 @@ Il processo di prenotazione prevede l'interazione dell'utente con l'interfaccia
 \end_layout
 
 \begin_layout Standard
-Il procescon l'inserimento da parte dell'utente delle credenziali, che vengono
- inviate al sistema centrale che le verifica.
- Se la verifica non va a buon fine l'utente viene notificato e le credenziali
- dovranno essere reinserite.
- Altrimenti dopo la ricezione della conferma seleziona dall'interfaccia
- la funzionalità prenotazione e richiede al sistema le prestazioni disponibili.
+Se l'utente non ha effettuato il login dovrà inserire le proprie credenziali,
+ che verranno inviate al sistema centrale che le verificherà.
+ Se la verifica non va a buon fine il processo termina comunicando all'utente
+ che le credenziali dovranno essere reinserite.
+ 
+\end_layout
+
+\begin_layout Standard
+Altrimenti la sessiona inizia con una notifica da parte dell'utente al sistema
+ centrale.
+ 
+\end_layout
+
+\begin_layout Standard
+Dunque l'utente seleziona dall'interfaccia la funzionalità prenotazione
+ e richiede al sistema le prestazioni disponibili.
  Questo effettua la ricerca nel database e notifica l'esito all'utente.
  Se è negativo entrambi i processi terminano.
  Altrimenti i dati vengono mandati all'utente che li visualizza.
